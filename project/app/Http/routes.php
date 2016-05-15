@@ -11,17 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    $data = [
-      'name'=>'Jon',
-      'lastName'=>'J',
-      'email'=>'jon@email.com',
-      'location'=>'NJ',
-    ];
-    return view('hello')->withData($data);
+Route::get('/', function(){
+    return view('todos/index');
 });
 
 Route::get('/hello/{name?}', function ($name="World") {
 
     return view('welcome')->with('name', $name);
+});
+Route::get('/todos', function(){
+    return view('todos/index');
+});
+Route::get('/todos/{id}', function($id){
+    return view('todos.show')->with('id' , $id);
 });
