@@ -11,17 +11,11 @@
 |
 */
 
-Route::get('/', function(){
-    return view('todos/index');
-});
-
-Route::get('/hello/{name?}', function ($name="World") {
-
-    return view('welcome')->with('name', $name);
-});
-Route::get('/todos', function(){
-    return view('todos/index');
-});
-Route::get('/todos/{id}', function($id){
-    return view('todos.show')->with('id' , $id);
+Route::get('/', 'TodoListController@index');
+Route::get('/todos', 'TodoListController@index');
+Route::get('/todos/{id}', 'TodoListController@show');
+Route::resource('todos', 'TodoListController');
+Route::get('/db', function(){
+  $result =  DB::table('bar')->where('firstName', 'Jon')->first();
+  return $result->firstName;
 });

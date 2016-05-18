@@ -7,9 +7,9 @@
 
         <!--<script src="js/vendor/modernizr.js"></script>-->
         <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/foundation.min.css" />
-        <link rel="stylesheet" href="css/app.css" />
-        <link rel="stylesheet" href="css\bootstrap.min.css"/>
+        <link rel="stylesheet" href="{{{asset('css/foundation.min.css')}}}" />
+        <link rel="stylesheet" href="{{{asset('css/app.css')}}}" />
+        <link rel="stylesheet" href="{{{asset('css\bootstrap.min.css')}}}"/>
     </head>
 
     <body>
@@ -92,9 +92,9 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="{{{asset('js/vendor/jquery.js')}}}"></script>
+    <script src="{{{asset('js/vendor/foundation.js')}}}"></script>
+    <script src="{{{asset('js/vendor/bootstrap.min.js')}}}"></script>
     <script>
       $(document).foundation();
     </script>
